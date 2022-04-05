@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  database:
+    container_name: postgres-csc2020
+    image: postgres:latest 
+    ports: 
+      - "5437:5432"    
+    env_file:
+      - csc2020.env
+    volumes:  
+      - /var/lib/postgresql/data 
