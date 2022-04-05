@@ -1,12 +1,11 @@
 version: '3'
-
 services:
   database:
     container_name: postgres-csc2020
-    image: postgres:latest 
-    ports: 
-      - "5437:5432"    
+    image: postgres:latest
+    ports:
+      - "5433:5432"
+    volumes:
+      - c:/Users/SST-LAB/data/postgres/csc2020:/data/postgres
     env_file:
       - csc2020.env
-    volumes:  
-      - /var/lib/postgresql/data 
